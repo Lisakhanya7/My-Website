@@ -12,6 +12,10 @@ body {
     flex-direction: column;
 }
 
+.active {
+  color: #fff;
+}
+
 .footer {
     margin-top: auto;
     background: #222;
