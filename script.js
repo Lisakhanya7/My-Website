@@ -1,11 +1,6 @@
 const navbarLinks = document.querySelectorAll('.navbar a');
 const sections = document.querySelectorAll('section');
 
-
-document.getElementById('contact-btn').addEventListener('click', () => {
-  window.location.href = '#contact';
-})
-
 document.addEventListener('keydown', function(event) {
   if (event.key === 'a' || event.key === 'A') {
     document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
