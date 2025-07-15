@@ -32,3 +32,16 @@ navbarLinks.forEach(link => {
         }
     });
 });
+
+window.addEventListener('scroll', () => {
+  const section2 = document.getElementById('section2');
+  const navbar = document.getElementById('navbar');
+  const section2Top = section2.offsetTop;
+  const scrollPosition = window.scrollY + navbar.offsetHeight;
+
+  if (scrollPosition > section2Top) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
