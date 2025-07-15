@@ -1,6 +1,8 @@
 const navbarLinks = document.querySelectorAll('.navbar a');
 const sections = document.querySelectorAll('section');
 
+
+
 document.addEventListener('keydown', function(event) {
   if (event.key === 'a' || event.key === 'A') {
     document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
