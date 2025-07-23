@@ -7,6 +7,9 @@ html, body {
 }
 
 body {
+    font-size: calc(1rem + 0.5vw);
+    font-family: Arial, sans-serif;
+    padding-top: 60px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -16,12 +19,16 @@ body {
   color: #fff;
 }
 
+section {
+  padding: 2rem;
+}
+
+
 .footer {
-    margin-top: auto;
     background: #222;
     color: #fff;
     text-align: center;
-    padding: 20px 0;
+    padding: 1rem;
 }
 
 .header {
@@ -75,7 +82,8 @@ body {
 }
 
 .content {
-  margin-top: 80px;
+  grid-row: 2;
+  overflow-y: auto;
 }
 
 
@@ -109,21 +117,168 @@ body {
 }
 
 .home-content h1 {
-    font-size: 56px;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
     font-weight: 700;
     line-height: 1;
+    margin-bottom: 0.5em;
     animation: slideRight .5s ease forwards;
     animation-delay: 1.5s;
 }
 
 .home-content h3 {
-    font-size: 32px;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
     font-weight: 700;
     animation: slideRight .7s ease forwards;
     animation-delay: 1s;
 }
 
 .home-content p {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 2.3s;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 80vh;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 40px 0;;
+}
+
+.about-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 0.5em;
+    animation: slideRight .5s ease forwards;
+    animation-delay: 1.5s;
+}
+
+.about-content p {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 2.3s;
+}
+
+.skill-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 80vh;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 40px 0;;
+}
+
+.skill-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 0.5em;
+    animation: slideRight .5s ease forwards;
+    animation-delay: 1.5s;
+}
+
+.skill-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+    animation: slideRight .7s ease forwards;
+    animation-delay: 1s;
+}
+
+.skill-content p {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 2.3s;
+}
+
+.portfolio-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 80vh;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 40px 0;;
+}
+
+.portfolio-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 0.5em;
+    animation: slideRight .5s ease forwards;
+    animation-delay: 1.5s;
+}
+
+.portfolio-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+    animation: slideRight .7s ease forwards;
+    animation-delay: 1s;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 80vh;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 40px 0;;
+}
+
+.contact-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 0.5em;
+    animation: slideRight .5s ease forwards;
+    animation-delay: 1.5s;
+}
+
+.contact-content h3 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+    animation: slideRight .7s ease forwards;
+    animation-delay: 1s;
+}
+
+.contact-content p {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
     font-family: Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
@@ -196,7 +351,7 @@ section {
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-height: 100vh; /* Adjust the height as needed */
+  min-height: 100vh;
   width: 100%;
   box-sizing: border-box;
   padding: 40px 0;
@@ -210,7 +365,7 @@ section {
 }
 
 .project {
-  background-color: #f7f7f7; /* Add a background color if needed */
+  background-color: #f7f7f7;
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 10px;
@@ -255,7 +410,6 @@ section {
 .cv-content li {
   margin-bottom: 10px;
 }
-
 
 
 .btn {
@@ -336,7 +490,7 @@ section {
     opacity: 0;
     justify-content: center;
     align-items: center;
-    animation: slideBottom 1s ease forwards;
+    animation: slideTop 1s ease forwards;
     animation-delay: 2.1s;
 }
 
@@ -344,11 +498,19 @@ section {
     opacity: 0;
     justify-content: center;
     align-items: center;
-    animation: slideRight 1s ease forwards;
+    animation: slideTop 1s ease forwards;
     animation-delay: 2.1s;
 }
 
 .home-sci a:nth-child(3) {
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2.1s;
+}
+
+.home-sci a:nth-child(4) {
     opacity: 0;
     justify-content: center;
     align-items: center;
@@ -390,6 +552,62 @@ section {
     position: relative;
     z-index: 1;
     transition: 0.3s ease;
+}
+
+.container {
+  min-height: 200px;
+  padding: 20px;
+}
+.pile {
+  display: grid;
+  grid-template-areas: "pile";
+  place-items: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.pile > div {
+  z-index: 1;
+}
+
+img.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+    animation: slideBottom .5s ease forwards;
+    animation-delay: 2.5s;
+}
+
+.XOLISA {
+  display: flex;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 200px; /* adjust the width to your liking */
+  height: 200px; /* adjust the height to your liking */
+  margin-right: 20px; /* add some space between the image and text */
+  border-radius: 50%; /* optional: make the image circular */
+}
+
+.intro-text {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 0.9rem;
+  }
 }
 
 @keyframes slideTop {
