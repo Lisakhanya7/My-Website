@@ -46,24 +46,19 @@ section.home {
 }
 
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 30px;
-    background-color: #222;
+    background: rgba(34, 34, 34, 0.85); 
     padding: 1rem;
     border-radius: 30px;
     margin: 0 auto;
     max-width: 900px;  
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    z-index: 9999;
-    will-change: transform;
+    white-space: nowrap;
+    overflow: hidden;
 }
-
 
 .navbar a {
     font-size: 20px;
@@ -220,16 +215,16 @@ home.content p {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 100px;
-    height: 48px;
+    padding: 0.75rem 1.5rem;
     border-radius: 40px;
     font-size: 19px;
-    color:aliceblue;
+    color: aliceblue;
     text-decoration: none;
     font-weight: 700;
     letter-spacing: 1px;
     z-index: 1;
     opacity: 0;
+    white-space: nowrap;
     animation: slideTop 1s ease forwards;
     animation-delay: 1.8s;
 }
@@ -237,42 +232,35 @@ home.content p {
 .btn::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
     inset: 0;
-    background: linear-gradient(45deg, #d7d9e0,#ffd700, #0c1022);
-    background-size: 200%;
-    background-position: 0 0;
-    z-index: -1;
+    background: linear-gradient(45deg, #4169e4, #ffd700, #0c1022);
     border-radius: 40px;
+    z-index: -1;
+    transform: scale(.98);
     filter: blur(5px);
-    transition: 5s ease;
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .btn:hover::before {
-    background-position: 100% 0;
+    filter: blur(8px);
+    transform: scale(1);
 }
 
 .btn::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
     inset: 0;
-    background: linear-gradient(45deg, #4169e4,#3a382d,#0c1022);
-    background-position: 0 0; 
-    background-size: 200%;
-    z-index: -1;
+    background: rgb(30, 52, 78);
     border-radius: 40px;
-    transition: 5s ease;
-    opacity: 0;
-    animation: slideTop 1s ease forwards;
-    animation-delay: 1.8s;
+    z-index: -1;
+    transform: scale(.98);
+    transition: transform 0.3s ease;
 }
 
 .btn:hover::after {
-    background-position: 100% 0;
+    transform: scale(0.95);
 }
+
 
 .profile-pic {
   width: 200px;
