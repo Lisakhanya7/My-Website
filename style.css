@@ -46,17 +46,24 @@ section.home {
 }
 
 .navbar {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 30px;
-    background: rgba(34, 34, 34, 0.85); 
+    background-color: #222;
     padding: 1rem;
     border-radius: 30px;
     margin: 0 auto;
     max-width: 900px;  
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    will-change: transform;
 }
+
 
 .navbar a {
     font-size: 20px;
