@@ -154,6 +154,7 @@ section.home {
 .home-sci a:nth-child(2) { animation-delay: 1.3s; }
 .home-sci a:nth-child(3) { animation-delay: 1.5s; }
 .home-sci a:nth-child(4) { animation-delay: 1.7s; }
+.home-sci a:nth-child(5) { animation-delay: 1.9s; }
 
 .home-sci a::before {
     content: '';
