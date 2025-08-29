@@ -2,18 +2,18 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8"/>
-        <meta name="viewport"
-        content="width=device-width, initial-scale=1.0"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>My Personal Website</title>
         <link rel="stylesheet" href="style.css">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     </head>
     <body>
         <header class="header">
             <a href="#" class="logo">
-                <img src = "Personal logo.jpg" alt = "Personal Website logo" style="height: 70px; vertical-align: middle"</a>
+                <img src="Personal logo.jpg" alt="Personal Website logo" style="height: 70px; vertical-align: middle;">
+            </a>
 
-            <nav class="navbar">
+            <nav class="navbar" id="navbar">
                  <a href="#home" class="active" style="--i:1">Home</a>
                  <a href="#about" style="--i:2">About</a>
                  <a href="#skills" style="--i:3">Skills</a>
@@ -21,19 +21,23 @@
                  <a href="#contact" style="--i:5">Contact</a>
             </nav>
         </header>
-         <section  id="home" class="home">
+
+        <section id="home" class="home">
             <div class="home-content">
                 <div class="intro">
-        <img src="XOLISA.jpg" alt="Lisakhanyisa's profile picture" class="profile-pic">
-            <div class="home-content">
-                <h1>Hello, I'm Lisakhanya Gumengi</h1>
-                <h3>Web Developer student</h3>
-                <p>I'm a student passionate about web development and technology. This site showcases my projects, skills, and experiences.</p>
-                <p>Feel free to explore my work and get in touch if you have any questions or opportunities!</p>
-                <p>Let's build something amazing together!</p>
-                <p>Check out my projects and connect with me on social media!</p>
+                    <img src="XOLISA.jpg" alt="Lisakhanyisa's profile picture" class="profile-pic">
+                    <div class="home-content">
+                        <h1>Hello, I'm Lisakhanya Gumengi</h1>
+                        <h3>Web Developer student</h3>
+                        <p>I'm a student passionate about web development and technology. This site showcases my projects, skills, and experiences.</p>
+                        <p>Feel free to explore my work and get in touch if you have any questions or opportunities!</p>
+                        <p>Let's build something amazing together!</p>
+                        <p>Check out my projects and connect with me on social media!</p>
+                    </div>
+                </div>
             </div>
         </section>
+
         <section id="about" class="about">
             <div class="about-content">
                 <h1>About Me</h1>
@@ -41,31 +45,34 @@
                 <p>In my free time, I love exploring new programming languages and frameworks, and I am always eager to take on new challenges that help me grow as a developer.</p>
             </div>
         </section>
+
         <section id="skills" class="skills">
             <div class="skills-content">
                 <h1>My Skills</h1>
             </div>
-                <div class="skill-sci">
-                    <a href="https://www.freecodecamp.org/learn/responsive-web-design/#basic-html-and-html5" target="_blank">
-                    <i class='bx bxs-file-html' ></i>
+            <div class="skill-sci">
+                <a href="https://www.freecodecamp.org/learn/responsive-web-design/#basic-html-and-html5" target="_blank">
+                    <i class='bx bxs-file-html'></i>
                 </a>
-                    <a href="https://www.freecodecamp.org/learn/responsive-web-design/#basic-css" target="_blank">
-                    <i class='bx bxs-file-css' ></i>
+                <a href="https://www.freecodecamp.org/learn/responsive-web-design/#basic-css" target="_blank">
+                    <i class='bx bxs-file-css'></i>
                 </a>
-                    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures" target="_blank">
+                <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures" target="_blank">
                     <i class='bx bxl-javascript'></i>
-                </div>
+                </a>
             </div>
         </section>
+
         <section id="portfolio" class="portfolio">
             <h1>My Projects</h1>
             <div class="portfolio-content">
                 <div class="project">
                     <p>A personal portfolio website showcasing my skills and projects.</p>
+                </div>
                 <div class="project">
                     <h2>Simple Website</h2>
                     <p>A responsive website built with HTML and CSS.</p>
-                    <p>Website: <a href="https://lisakhanya7.github.io/My-Website//">My-Personal-Website</a></p>
+                    <p>Website: <a href="https://lisakhanya7.github.io/My-Website/">My-Personal-Website</a></p>
                 </div>
                 <div class="project">
                     <h2>VimBa App Prototype</h2>
@@ -73,7 +80,7 @@
                     <p>Figma: <a href="https://www.figma.com/proto/alYJ1phZiYMYwa5zpmM7Rk/Team-7-MUB-work-file?node-id=19241-3433&p=f&t=5BSIt5zJR9zrWhjO-1&scaling=scale-down&content-scaling=fixed&page-id=3140%3A3007&starting-point-node-id=19241%3A3433&show-proto-sidebar=1">VimBa App</a></p>
                 </div>
                 <div class="cv-content">
-                    <h2>Lisakhanya Gumengi</h2
+                    <h2>Lisakhanya Gumengi</h2>
                     <h3>Education</h3>
                     <ul>
                         <li>Web Development Student, Umuzi</li>
@@ -81,19 +88,17 @@
                     <h3>View CV</h3>
                     <a href="cv.pdf" onclick="window.open(this.href, '_blank'); return false;" class="btn">View CV</a>
                 </div>
-            </section>
-        </div>
-        
-       <section id="contact" class="contact">
-         <div class="contact-content">
-            <h1>Get in Touch</h1>
-        </div>
-            
-        
-           <div class="home-sci">
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="contact-content">
+                <h1>Get in Touch</h1>
+            </div>
+            <div class="home-sci">
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=lisakhanyaxolisagumenge@gmail.com" target="_blank">
                     <i class='bx bxl-gmail'></i>
-                    </a>
+                </a>
                 <a href="https://www.facebook.com/xolisa.gumengeii" target="_blank">
                     <i class='bx bxl-facebook'></i>
                 </a>
@@ -103,17 +108,12 @@
                 <a href="https://www.linkedin.com/in/lisakhanya-gumengi-b98b6836a" target="_blank">
                     <i class='bx bxl-linkedin'></i>
                 </a>
-                <a href="http://Wa.me/+27768782426" target="_blank">
-                    <i class='bx bxl-whatsapp' ></i>
+                <a href="http://wa.me/+27768782426" target="_blank">
+                    <i class='bx bxl-whatsapp'></i>
                 </a>
             </div>
-         <script src="./script.js"></script>
-    </body>   
-</section>
+        </section>
 
-        
+        <script src="./script.js"></script>
+    </body>
 </html>
-
-
-
-
