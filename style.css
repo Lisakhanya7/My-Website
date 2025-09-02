@@ -153,10 +153,6 @@ section.home {
     box-shadow: 0 10px 20px rgba(65,105,228,0.5);
 }
 
-.home-sci a i {
-    transition: all 0.3s ease;
-}
-
 .home-sci a:hover i {
     color: #ffd700;
 }
@@ -180,17 +176,18 @@ section.home {
     border-radius: 50%;
     transform: scale(.88);
     z-index: -1;
-    transition: 0.5s ease;
+    transition: 1.0s ease;
 }
 
 .home-sci a:hover::after {
+    transition: color 1.0s ease, all 2.0s ease;
     transform: scale(0);
 }
 
 .home-sci a i {
     position: relative;
     z-index: 1;
-    transition: 0.3s ease;
+    transition: 1.0s ease;
 }
 
 .skill-sci {
@@ -221,8 +218,9 @@ section.home {
     box-shadow: 0 10px 20px rgba(65,105,228,0.5);
 }
 
+.home-sci a i,
 .skill-sci a i {
-    transition: all 0.3s ease;
+    transition: color 1.0s ease, all 2.0s ease;
 }
 
 .skill-sci a:hover i {
@@ -234,7 +232,6 @@ section.home {
     animation: slideTop 1s ease forwards;
 }
 
-
 .skill-sci a::after {
     content: '';
     position: absolute;
@@ -244,12 +241,14 @@ section.home {
     border-radius: 50%;
     transform: scale(.88);
     z-index: -1;
-    transition: 0.5s ease;
+    transition: 1.0s ease;
 }
 
 .skill-sci a:hover::after {
     transform: scale(0);
+    transition: color 1.0s ease, all 2.0s ease;
 }
+
 
 .skill-sci a:nth-child(1) { animation-delay: 0.3s; }
 .skill-sci a:nth-child(2) { animation-delay: 0.5s; }
@@ -258,7 +257,7 @@ section.home {
 .skill-sci a i {
     position: relative;
     z-index: 1;
-    transition: 0.3s ease;
+    transition: 1.0s ease;
 }
 
 .btn {
