@@ -22,7 +22,7 @@ Skills section with icons linking to FreeCodeCamp
 
 Portfolio section with project links
 
-CV download link
+CV view link
 
 Contact section with social media links
 
