@@ -1,62 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lisakhanya's Personal Website</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lisakhanya's Personal Website</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <a href="#" class="logo">
-            <img src="Personal%20logo.jpg" alt="Personal Website logo" class="logo-img">
+  <header class="header">
+    <a href="#" class="logo">
+      <img src="Personal-logo.jpg" alt="Personal Website logo" class="logo-img">
+    </a>
+    <nav class="navbar" id="navbar">
+      <a href="#home" class="active" style="--i:1">Home</a>
+      <a href="#about" style="--i:2">About</a>
+      <a href="#skills" style="--i:3">Skills</a>
+      <a href="#portfolio" style="--i:4">Portfolio</a>
+      <a href="#contact" style="--i:5">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home" class="home">
+    <div class="home-content">
+      <img src="XOLISA.jpg" alt="Lisakhanya's profile picture" class="profile-pic">
+      <div>
+        <h1>Hello, I'm <span class="highlight">Lisakhanya Gumengi</span></h1>
+        <h3>Web Developer Student</h3>
+        <p>I'm a student passionate about web development and technology. This site showcases my projects, skills, and experiences.</p>
+        <p>Feel free to explore my work and get in touch if you have any questions or opportunities!</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about section">
+    <div class="about-content">
+      <h2>About Me</h2>
+      <p>I am a dedicated web development student with a passion for creating dynamic and responsive websites. I enjoy learning new technologies and improving my skills in HTML, CSS, and JavaScript.</p>
+      <p>In my free time, I love exploring new programming languages and frameworks, and I am always eager to take on new challenges that help me grow as a developer.</p>
+    </div>
+  </section>
+
+  <section id="skills" class="skills section">
+    <h2>Skills</h2>
+    <div class="skill-sci">
+      <a href="https://www.freecodecamp.org/learn/responsive-web-design/#basic-html-and-html5" target="_blank" title="HTML5">
+        <i class='bx bxl-html5'></i>
+      </a>
+      <a href="https://www.freecodecamp.org/learn/responsive-web-design/#basic-css" target="_blank" title="CSS3">
+        <i class='bx bxl-css3'></i>
+      </a>
+      <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures" target="_blank" title="JavaScript">
+        <i class='bx bxl-javascript'></i>
+      </a>
+    </div>
+  </section>
+
+  <section id="portfolio" class="portfolio section">
+    <h2>My Projects</h2>
+    <div class="portfolio-content">
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>A personal portfolio website showcasing my skills and projects.</p>
+      </div>
+      <div class="project-card">
+        <h3>Simple Website</h3>
+        <p>A responsive website built with HTML and CSS.</p>
+        <p>Website: <a href="https://lisakhanya7.github.io/My-Website/" target="_blank">My Personal Website</a></p>
+      </div>
+      <div class="project-card">
+        <h3>VimBa App Prototype</h3>
+        <p>Layout, Visual design and Interaction design using Figma.</p>
+        <p>Figma: <a href="https://www.figma.com/proto/alYJ1phZiYMYwa5zpmM7Rk/Team-7-MUB-work-file?node-id=19241-3433&p=f&t=5BSIt5zJR9zrWhjO-1&scaling=scale-down&content-scaling=fixed&page-id=3140%3A3007&starting-point-node-id=19241%3A3433&show-proto-sidebar=1" target="_blank">VimBa App</a></p>
+      </div>
+
+      <div class="portfolio-sci">
+        <h3>Completed Sololearn Certificates</h3>
+        <a href="Lisakhanya-JavaScript-Intermediate.pdf" target="_blank" title="JavaScript Intermediate">
+          <i class='bx bxl-javascript'></i>
         </a>
-        <nav class="navbar" id="navbar">
-            <a href="#home" class="active" style="--i:1">Home</a>
-            <a href="#about" style="--i:2">About</a>
-            <a href="#skills" style="--i:3">Skills</a>
-            <a href="#portfolio" style="--i:4">Portfolio</a>
-            <a href="#contact" style="--i:5">Contact</a>
-        </nav>
-    </header>
+        <a href="Lisakhanya-HTML-Introduction.pdf" target="_blank" title="HTML Introduction">
+          <i class='bx bxl-html5'></i>
+        </a>
+        <a href="Lisakhanya-CSS-Certificate.pdf" target="_blank" title="CSS Certificate">
+          <i class='bx bxl-css3'></i>
+        </a>
+      </div>
 
-    <section id="home" class="home">
-        <div class="home-content">
-            <img src="XOLISA.jpg" alt="Lisakhanyisa's profile picture" class="profile-pic">
-            <div>
-                <h1>Hello, I'm <span class="highlight">Lisakhanya Gumengi</span></h1>
-                <h3>Web Developer Student</h3>
-                <p>I'm a student passionate about web development and technology. This site showcases my projects, skills, and experiences.</p>
-                <p>Feel free to explore my work and get in touch if you have any questions or opportunities!</p>
-            </div>
-        </div>
-    </section>
+      <div class="cv-content">
+        <h3>Education</h3>
+        <ul>
+          <li>Web Development Student, Umuzi</li>
+          <li>High School Diploma, Ikamvalesizwe Combined School</li>
+        </ul>
+        <a href="cv.pdf" target="_blank" class="btn btn-primary">View CV</a>
+        <a href="mailto:lisakhanyaxolisagumenge@gmail.com" class="btn btn-hire">Hire Me</a>
+      </div>
+    </div>
+  </section>
 
-    <section id="about" class="about section">
-        <div class="about-content">
-            <h2>About Me</h2>
-            <p>I am a dedicated web development student with a passion for creating dynamic and responsive websites. I enjoy learning new technologies and improving my skills in HTML, CSS, and JavaScript.</p>
-            <p>In my free time, I love exploring new programming languages and frameworks, and I am always eager to take on new challenges that help me grow as a developer.</p>
-        </div>
-    </section>
+  <section id="contact" class="contact section">
+    <h2>Get in Touch</h2>
+    <div class="contact-sci">
+      <a href="mailto:lisakhanyaxolisagumenge@gmail.com" target="_blank" title="Email">
+        <i class='bx bxl-gmail'></i>
+      </a>
+      <a href="https://www.facebook.com/xolisa.gumengeii" target="_blank" title="Facebook">
+        <i class='bx bxl-facebook'></i>
+      </a>
+      <a href="https://www.instagram.com/xolisagumengei/" target="_blank" title="Instagram">
+        <i class='bx bxl-instagram'></i>
+      </a>
+      <a href="https://www.linkedin.com/in/lisakhanya-gumengi-b98b6836a" target="_blank" title="LinkedIn">
+        <i class='bx bxl-linkedin'></i>
+      </a>
+      <a href="https://wa.me/27768782426" target="_blank" title="WhatsApp">
+        <i class='bx bxl-whatsapp'></i>
+      </a>
+    </div>
+  </section>
 
-    <section id="skills" class="skills section">
-        <h2>Skills</h2>
-        <div class="skill-sci">
-            <a href="https://www.freecodecamp.org/learn/responsive-web-design/#basic-html-and-html5" target="_blank" title="HTML5">
-                <i class='bx bxs-file-html'></i>
-            </a>
-            <a href="https://www.freecodecamp.org/learn/responsive-web-design/#basic-css" target="_blank" title="CSS3">
-                <i class='bx bxs-file-css'></i>
-            </a>
-            <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures" target="_blank" title="JavaScript">
-                <i class='bx bxl-javascript'></i>
-            </a>
-        </div>
-    </section>
+  <footer class="footer">
+    <p>&copy; 2025 Lisakhanya Gumengi. All rights reserved.</p>
+    <p>Designed by Lisakhanya Gumengi</p>
+  </footer>
 
+<<<<<<< HEAD
     <section id="portfolio" class="portfolio section">
         <h2>My Projects</h2>
         <div class="portfolio-content">
