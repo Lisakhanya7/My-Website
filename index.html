@@ -81,15 +81,20 @@
       <div class="section-header">
         <h2>Featured Projects</h2>
       </div>
+      <nav class="portfolio-navbar">
+        <button class="portfolio-filter active" data-filter="all">All Projects</button>
+        <button class="portfolio-filter" data-filter="web">Web Development</button>
+        <button class="portfolio-filter" data-filter="design">Design</button>
+      </nav>
       <div class="portfolio-grid">
-        <div class="project-card">
+        <div class="project-card" data-category="web">
           <div class="project-icon">
             <i class='bx bxs-briefcase'></i>
           </div>
           <h3>Portfolio Website</h3>
           <p>A personal portfolio website showcasing my skills and projects with responsive design.</p>
         </div>
-        <div class="project-card">
+        <div class="project-card" data-category="web">
           <div class="project-icon">
             <i class='bx bxs-layout'></i>
           </div>
@@ -97,7 +102,7 @@
           <p>A fully responsive website built with modern HTML and CSS techniques.</p>
           <a href="https://lisakhanya7.github.io/My-Website/" target="_blank" class="project-link">View Project →</a>
         </div>
-        <div class="project-card">
+        <div class="project-card" data-category="design">
           <div class="project-icon">
             <i class='bx bxs-palette'></i>
           </div>
