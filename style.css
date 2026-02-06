@@ -54,6 +54,26 @@ section.home {
     transition: transform 0.3s ease;
 }
 
+.nav-logo {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    z-index: 1001;
+    text-decoration: none;
+    color: #667eea;
+    transition: transform 0.3s ease;
+}
+
+.nav-logo:hover {
+    transform: scale(1.1);
+}
+
 .navbar {
     display: flex;
     justify-content: center;
@@ -348,6 +368,11 @@ p, li {
     .navbar { flex-wrap: wrap; gap: 12px; }
     .profile-pic { width: 120px; height: 120px; }
     section { padding: 24px 0; }
+    .nav-logo {
+        top: 20px;
+        left: 20px;
+        font-size: 1.4rem;
+    }
 }
 
 @media (max-width: 480px) {
