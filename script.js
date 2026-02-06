@@ -51,6 +51,29 @@ window.addEventListener('scroll', () => {
   }
 });
 
+// Portfolio filter functionality
+const portfolioFilters = document.querySelectorAll('.portfolio-filter');
+const projectCards = document.querySelectorAll('.project-card');
+
+portfolioFilters.forEach(filter => {
+  filter.addEventListener('click', function () {
+    const filterValue = this.getAttribute('data-filter');
+    
+    // Update active filter button
+    portfolioFilters.forEach(f => f.classList.remove('active'));
+    this.classList.add('active');
+    
+    // Filter project cards
+    projectCards.forEach(card => {
+      if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  });
+});
+
 window.addEventListener('DOMContentLoaded', () => {
   sections.forEach((section, idx) => {
     section.style.display = idx === 0 ? 'block' : 'none';
