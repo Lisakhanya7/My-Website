@@ -296,6 +296,43 @@ p, li {
 }
 
 
+.portfolio-navbar {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.portfolio-filter {
+    padding: 12px 28px;
+    border: 2px solid #4169e4;
+    background: transparent;
+    color: #4169e4;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.portfolio-filter:hover {
+    background: #4169e4;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.portfolio-filter.active {
+    background: linear-gradient(45deg, #4169e4, #ffd700);
+    color: #fff;
+    border-color: transparent;
+}
+
+.project-card.hidden {
+    display: none;
+}
+
 @media (max-width: 1200px) {
     body { font-size: 1.1rem; }
     .navbar { max-width: 98vw; }
