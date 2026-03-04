@@ -82,3 +82,22 @@ window.addEventListener('DOMContentLoaded', () => {
     navbarLinks[0].classList.add('active');
   }
 });
+
+// PDF Document Viewer Functionality
+const docButtons = document.querySelectorAll('.doc-btn');
+const pdfDisplay = document.getElementById('pdf-display');
+
+if (docButtons.length > 0 && pdfDisplay) {
+  docButtons.forEach(button => {
+    button.addEventListener('click', function () {
+      const pdfFile = this.getAttribute('data-pdf');
+      
+      // Update active button
+      docButtons.forEach(btn => btn.classList.remove('active'));
+      this.classList.add('active');
+      
+      // Update PDF display
+      pdfDisplay.src = pdfFile;
+    });
+  });
+}

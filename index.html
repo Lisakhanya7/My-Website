@@ -17,7 +17,8 @@
         <a href="#about" style="--i:2">About</a>
         <a href="#skills" style="--i:3">Skills</a>
         <a href="#portfolio" style="--i:4">Portfolio</a>
-        <a href="#contact" style="--i:5">Contact</a>
+        <a href="#documents" style="--i:5">Documents</a>
+        <a href="#contact" style="--i:6">Contact</a>
       </div>
     </nav>
   </header>
@@ -145,7 +146,35 @@
       </div>
     </div>
   </section>
-
+  <section id="documents" class="documents">
+    <div class="container">
+      <div class="section-header">
+        <h2>Documents & Certifications</h2>
+        <p>View my certificates and CV below</p>
+      </div>
+      <div class="documents-grid">
+        <button class="doc-btn active" data-pdf="cv.pdf">
+          <i class='bx bxs-file-pdf'></i>
+          <span>CV</span>
+        </button>
+        <button class="doc-btn" data-pdf="Lisakhanya's JavaScript Imtermediate.pdf">
+          <i class='bx bxs-file-pdf'></i>
+          <span>JavaScript</span>
+        </button>
+        <button class="doc-btn" data-pdf="Lisakhanya's HTML  Introduction.pdf">
+          <i class='bx bxs-file-pdf'></i>
+          <span>HTML</span>
+        </button>
+        <button class="doc-btn" data-pdf="Lisakhanya's CSS Certificate.pdf">
+          <i class='bx bxs-file-pdf'></i>
+          <span>CSS</span>
+        </button>
+      </div>
+      <div class="pdf-viewer">
+        <embed id="pdf-display" src="cv.pdf" type="application/pdf">
+      </div>
+    </div>
+  </section>
   <section id="contact" class="contact section">
     <h2>Get in Touch</h2>
     <div class="contact-sci">
