@@ -97,7 +97,8 @@ if (docButtons.length > 0 && pdfDisplay) {
       this.classList.add('active');
       
       // Update PDF display
-      pdfDisplay.src = pdfFile;
+      // encode URI to handle spaces or special characters in filenames
+      pdfDisplay.src = encodeURI(pdfFile);
     });
   });
 }
@@ -110,7 +111,7 @@ if (certBadges.length > 0 && pdfDisplay) {
       e.preventDefault();
       const pdfFile = this.getAttribute('data-pdf') || this.getAttribute('href');
       if (pdfFile) {
-        pdfDisplay.src = pdfFile;
+        pdfDisplay.src = encodeURI(pdfFile);
       }
       // optionally scroll to documents section
       const documentsSection = document.getElementById('documents');
