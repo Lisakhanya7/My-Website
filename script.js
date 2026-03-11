@@ -37,17 +37,14 @@ navbarLinks.forEach(link => {
   });
 });
 
+// toggle a class on the header when the page is scrolled, for a stronger background
 window.addEventListener('scroll', () => {
-  const section2 = document.getElementById('section2');
-  if (!section2 || !navbar) return;
-
-  const section2Top = section2.offsetTop;
-  const scrollPosition = window.scrollY + navbar.offsetHeight;
-
-  if (scrollPosition > section2Top) {
-    navbar.classList.add('scrolled');
+  const header = document.querySelector('.header');
+  if (!header) return;
+  if (window.scrollY > 50) {
+    header.classList.add('scrolled');
   } else {
-    navbar.classList.remove('scrolled');
+    header.classList.remove('scrolled');
   }
 });
 
