@@ -101,3 +101,24 @@ if (docButtons.length > 0 && pdfDisplay) {
     });
   });
 }
+
+// Make certificate icons open in the same PDF viewer
+const certBadges = document.querySelectorAll('.cert-badge');
+if (certBadges.length > 0 && pdfDisplay) {
+  certBadges.forEach(badge => {
+    badge.addEventListener('click', function(e) {
+      e.preventDefault();
+      const pdfFile = this.getAttribute('data-pdf') || this.getAttribute('href');
+      if (pdfFile) {
+        pdfDisplay.src = pdfFile;
+      }
+      // optionally scroll to documents section
+      const documentsSection = document.getElementById('documents');
+      if (documentsSection) {
+        documentsSection.scrollIntoView({ behavior: 'smooth' });
+      }
+      // clear active state on doc buttons
+      docButtons.forEach(btn => btn.classList.remove('active'));
+    });
+  });
+}
