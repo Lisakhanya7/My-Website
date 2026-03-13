@@ -82,13 +82,23 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // PDF Document Viewer Functionality
 const docButtons = document.querySelectorAll('.doc-btn');
+const pdfViewer = document.querySelector('.pdf-viewer');
 const pdfDisplay = document.getElementById('pdf-display');
+
+const showPdfViewer = () => {
+  if (pdfViewer) {
+    pdfViewer.style.display = 'block';
+  }
+};
 
 if (docButtons.length > 0 && pdfDisplay) {
   docButtons.forEach(button => {
     button.addEventListener('click', function () {
       const pdfFile = this.getAttribute('data-pdf');
       
+      // Show the viewer only after a document is selected
+      showPdfViewer();
+
       // Update active button
       docButtons.forEach(btn => btn.classList.remove('active'));
       this.classList.add('active');
@@ -108,6 +118,7 @@ if (certBadges.length > 0 && pdfDisplay) {
       e.preventDefault();
       const pdfFile = this.getAttribute('data-pdf') || this.getAttribute('href');
       if (pdfFile) {
+        showPdfViewer();
         pdfDisplay.src = encodeURI(pdfFile);
       }
       // optionally scroll to documents section

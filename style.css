@@ -553,6 +553,7 @@ p, li {
 }
 
 .pdf-viewer {
+    display: none;
     width: 100%;
     max-width: 900px;
     height: 600px;
