@@ -386,7 +386,7 @@ p, li {
     font-size: 0.95em;
     color: #444;
     background-color: #f0f4f8;
-    border-top: 1px solid #e6e9f0;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 
