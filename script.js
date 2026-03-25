@@ -33,6 +33,8 @@ navbarLinks.forEach(link => {
     const targetSection = document.getElementById(targetId);
     if (targetSection) {
       targetSection.style.display = 'block';
+      targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      history.replaceState(null, '', `#${targetId}`);
     }
   });
 });
