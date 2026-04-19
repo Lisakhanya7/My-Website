@@ -427,6 +427,63 @@ p, li {
     display: none;
 }
 
+.portfolio-certs {
+    margin-top: 40px;
+    width: 100%;
+}
+
+.portfolio-certs .section-header p {
+    max-width: 720px;
+    margin: 0 auto 28px;
+    color: #444;
+}
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    width: 100%;
+}
+
+.certificate-card {
+    display: block;
+    text-align: left;
+    background: #fff;
+    border: 1px solid rgba(65,105,228,0.12);
+    border-radius: 18px;
+    padding: 24px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    color: #22223b;
+    text-decoration: none;
+}
+
+.certificate-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(65,105,228,0.16);
+}
+
+.certificate-card h3 {
+    margin-top: 18px;
+    margin-bottom: 12px;
+}
+
+.certificate-card p {
+    color: #575757;
+    line-height: 1.6;
+}
+
+.certificate-card div {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: #4169e4;
+    color: #fff;
+    font-size: 1.4rem;
+}
+
 @media (max-width: 1200px) {
     body { font-size: 1.1rem; }
     .navbar { max-width: 98vw; }

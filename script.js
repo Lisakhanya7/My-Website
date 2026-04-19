@@ -11,31 +11,34 @@ document.addEventListener('keydown', (event) => {
   }
 });
 
+const navigateToSection = (targetId) => {
+  const targetSection = document.getElementById(targetId);
+  if (!targetSection) return;
+
+  sections.forEach(section => section.style.display = 'none');
+  targetSection.style.display = 'block';
+  targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+  navbarLinks.forEach(link => {
+    link.classList.toggle('active', link.getAttribute('href') === `#${targetId}`);
+  });
+
+  history.replaceState(null, '', `#${targetId}`);
+};
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
+    const targetId = this.getAttribute('href').substring(1);
+    navigateToSection(targetId);
   });
 });
 
 navbarLinks.forEach(link => {
   link.addEventListener('click', function (e) {
     e.preventDefault();
-
-    navbarLinks.forEach(l => l.classList.remove('active'));
-    this.classList.add('active');
-
-    sections.forEach(section => section.style.display = 'none');
     const targetId = this.getAttribute('href').substring(1);
-    const targetSection = document.getElementById(targetId);
-    if (targetSection) {
-      targetSection.style.display = 'block';
-      targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      history.replaceState(null, '', `#${targetId}`);
-    }
+    navigateToSection(targetId);
   });
 });
 
@@ -82,54 +85,4 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// PDF Document Viewer Functionality
-const docButtons = document.querySelectorAll('.doc-btn');
-const pdfViewer = document.querySelector('.pdf-viewer');
-const pdfDisplay = document.getElementById('pdf-display');
-
-const showPdfViewer = () => {
-  if (pdfViewer) {
-    pdfViewer.style.display = 'block';
-  }
-};
-
-if (docButtons.length > 0 && pdfDisplay) {
-  docButtons.forEach(button => {
-    button.addEventListener('click', function () {
-      const pdfFile = this.getAttribute('data-pdf');
-      
-      // Show the viewer only after a document is selected
-      showPdfViewer();
-
-      // Update active button
-      docButtons.forEach(btn => btn.classList.remove('active'));
-      this.classList.add('active');
-      
-      // Update PDF display
-      // encode URI to handle spaces or special characters in filenames
-      pdfDisplay.src = encodeURI(pdfFile);
-    });
-  });
-}
-
-// Make certificate icons open in the same PDF viewer
-const certBadges = document.querySelectorAll('.cert-badge');
-if (certBadges.length > 0 && pdfDisplay) {
-  certBadges.forEach(badge => {
-    badge.addEventListener('click', function(e) {
-      e.preventDefault();
-      const pdfFile = this.getAttribute('data-pdf') || this.getAttribute('href');
-      if (pdfFile) {
-        showPdfViewer();
-        pdfDisplay.src = encodeURI(pdfFile);
-      }
-      // optionally scroll to documents section
-      const documentsSection = document.getElementById('documents');
-      if (documentsSection) {
-        documentsSection.scrollIntoView({ behavior: 'smooth' });
-      }
-      // clear active state on doc buttons
-      docButtons.forEach(btn => btn.classList.remove('active'));
-    });
-  });
-}
+// PDF links now open in a separate browser tab, so no embedded viewer is required.
