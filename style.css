@@ -444,6 +444,7 @@ p, li {
     margin-right: 24px;
     border-radius: 50%;
     object-fit: cover;
+    object-position: 50% 30%;
     box-shadow: 0 4px 24px rgba(65,105,228,0.10);
     border: 4px solid #fff;
 }
@@ -584,7 +585,7 @@ p, li {
 @media (max-width: 768px) {
     body { font-size: 1rem; }
     .navbar { flex-wrap: wrap; gap: 12px; }
-    .profile-pic { width: 120px; height: 120px; }
+    .profile-pic { width: 120px; height: 120px; object-position: 50% 30%; }
     section { padding: 24px 0; }
     .nav-logo {
         top: 20px;
