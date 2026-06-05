@@ -13,6 +13,7 @@ body {
     display: flex;
     flex-direction: column;
     color: #2c3e50;
+    padding-top: 80px;
 }
 
 .active {
@@ -20,19 +21,21 @@ body {
 }
 
 section {
-    padding: 100px 0 48px;
+    padding: 60px 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    min-height: 80vh;
+    min-height: calc(100vh - 80px);
     width: 100%;
     box-sizing: border-box;
     background: linear-gradient(135deg, #ffffff 0%, #f5f9fb 100%);
-    border-radius: 18px;
-    box-shadow: 0 2px 16px rgba(31, 78, 120, 0.06);
-    margin-bottom: 32px;
+    border-radius: 0;
+    box-shadow: none;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 section:not(.home) {
@@ -103,8 +106,6 @@ section.home {
 body {
     padding-top: 80px; /* adjust if header height changes */
 }
-
-/* when scrolled, make header fully opaque */
 .header.scrolled {
     background: rgba(245, 247, 250, 1);
     box-shadow: 0 4px 12px rgba(0,0,0,0.12);
@@ -134,23 +135,7 @@ body {
     letter-spacing: 0.5px;
 }
 
-/* underline effect for links */
-.navbar a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background: linear-gradient(45deg, #2e8b9e, #c17d49);
-    left: 50%;
-    bottom: -6px;
-    transition: width 0.3s ease, left 0.3s ease;
-}
 
-.navbar a:hover::after,
-.navbar a.active::after {
-    width: 100%;
-    left: 0;
-}
 
 .navbar a.active,
 .navbar a:hover {
@@ -680,6 +665,11 @@ p, li {
 /* Documents & PDF Viewer Section */
 .documents {
     background: linear-gradient(135deg, #ffffff 0%, #f5f9fb 50%, #eef4f8 100%) !important;
+    min-height: 100vh !important;
+    padding: 60px 40px !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
 }
 
 .documents .section-header {
