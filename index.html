@@ -3,400 +3,159 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lisakhanya's Personal Website</title>
+  <title>Lisakhanya Gumengi | Full-Stack Developer</title>
+
   <link rel="stylesheet" href="style.css">
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <header class="header">
-    <a href="#home" class="logo nav-logo">LG</a>
-    <nav class="navbar" id="navbar">
-      <div class="nav-links">
-        <a href="#home" class="active" style="--i:1">Home</a>
-        <a href="#about" style="--i:2">About</a>
-        <a href="#skills" style="--i:3">Skills</a>
-        <a href="#portfolio" style="--i:4">Portfolio</a>
-        <a href="#documents" style="--i:5">Documents</a>
-        <a href="#contact" style="--i:6">Contact</a>
-      </div>
-    </nav>
-  </header>
 
-  <section id="home" class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <img src="Xolisa.jpg" alt="Lisakhanya's profile picture" class="profile-pic">
-        <div class="hero-text">
-        <h1>I'm <span class="highlight">Lisakhanya Gumengi</span>, a Kenton-On-Sea-based web developer specializing in full-stack solutions with a focus on polished, accessible digital experiences.</h1>
-          <p class="subtitle">Professional web development with modern HTML, CSS, JavaScript, React, Python, SQL, APIs, and certification-backed expertise.</p>
-          <p class="description">I build elegant, responsive websites and applications that communicate clearly and perform reliably. Currently deepening my expertise in advanced web development to transition into full-stack development, combining front-end creativity with back-end functionality and certification achievements in databases, APIs, Django, and full-stack technologies. Explore my projects, certifiable course work, and documented achievements to see how I turn design ideas into production-ready solutions.</p>
-          <div class="hero-actions">
-            <a href="#portfolio" class="btn btn-primary">See My Work</a>
-            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-          </div>
-        </div>
-      </div>
-      <div class="pdf-viewer" id="pdfViewer" aria-hidden="true">
-        <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid #eee;background:#fafafa;">
-          <strong id="pdfTitle">Document Preview</strong>
-          <button id="closePdf" aria-label="Close document viewer" class="btn btn-secondary">Close</button>
-        </div>
-        <embed id="pdfEmbed" src="" type="application/pdf">
+<header class="header">
+  <a href="#home" class="logo nav-logo">LG</a>
+
+  <nav class="navbar">
+    <a href="#home" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Portfolio</a>
+    <a href="#certs">Certificates</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section id="home" class="section hero">
+  <div class="hero-container">
+
+    <img src="Xolisa.jpg" class="profile-pic" alt="Profile">
+
+    <div class="hero-text">
+      <h1>
+        I’m <span class="highlight">Lisakhanya Gumengi</span>
+      </h1>
+
+      <p class="subtitle">
+        Kenton-On-Sea based web developer specializing in full-stack solutions and modern digital experiences.
+      </p>
+
+      <p>
+        I build elegant, responsive websites and applications using modern technologies including HTML, CSS, JavaScript, React, Python, SQL, APIs, and Django.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">See My Work</a>
+        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
       </div>
     </div>
-  </section>
 
-  <section id="about" class="about">
-    <div class="container">
-      <div class="section-header">
-        <h2>About Me</h2>
-      </div>
-      <div class="about-content">
-        <p>I'm Lisakhanya Gumengi, a dedicated web developer based in Kenton-On-Sea. I specialise in building clean, accessible websites and applications that are easy to use and easy to maintain, backed by professional certification and real project experience across front-end and back-end technologies.</p>
-        <p><strong>I am Lisakhanya Gumengi from Kenton On Sea, currently a student at Umuzi. For academics, look inside the PDF files in the Documents section for certificates and course records.</strong></p>
-        <p>My learning path combines structured coursework with hands-on work: from HTML, CSS and JavaScript to React, Python, SQL, and database management. This year, I'm focusing on advanced web development to become a full-stack developer, integrating comprehensive front-end and back-end skills. I approach each project with clarity, care, and a focus on delivering digital experiences that feel both professional and dependable.</p>
-        <ul class="about-list">
-          <li>✅ Certified knowledge in front-end, back-end development, and version control</li>
-          <li>🎨 Design-aware development for responsive and user-friendly interfaces</li>
-          <li>👩‍💻 Practical project work alongside portfolio and certification documentation</li>
-          <li>☕ Outside coding: refining ideas, exploring design systems, and staying curious</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+  </div>
+</section>
 
-  <section id="skills" class="skills">
-    <div class="container">
-      <div class="section-header">
-        <h2>Technical Skills</h2>
-      </div>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <i class='bx bxl-html5'></i>
-          <h3>HTML5</h3>
-          <p>Semantic markup and responsive structure</p>
-        </div>
-        <div class="skill-card">
-          <i class='bx bxl-css3'></i>
-          <h3>CSS3</h3>
-          <p>Modern styling and animations</p>
-        </div>
-        <div class="skill-card">
-          <i class='bx bxl-javascript'></i>
-          <h3>JavaScript</h3>
-          <p>Interactive and dynamic features</p>
-        </div>
-        <div class="skill-card">
-          <i class='bx bxl-react'></i>
-          <h3>React</h3>
-          <p>Component-based UI development</p>
-        </div>
-        <div class="skill-card">
-          <i class='bx bxl-python'></i>
-          <h3>Python</h3>
-          <p>Scripting and back-end logic</p>
-        </div>
-        <div class="skill-card">
-          <i class='bx bx-data'></i>
-          <h3>SQL</h3>
-          <p>Database querying and management</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- ABOUT -->
+<section id="about" class="section">
+  <h2>About Me</h2>
 
-  <section id="portfolio" class="portfolio">
-    <div class="container">
-      <div class="section-header">
-        <h2>Featured Projects</h2>
-      </div>
-      <nav class="portfolio-navbar">
-        <button class="portfolio-filter active" data-filter="all">All Projects</button>
-        <button class="portfolio-filter" data-filter="web">Web Development</button>
-        <button class="portfolio-filter" data-filter="design">Design</button>
-      </nav>
-      <div class="portfolio-grid">
-        <div class="project-card" data-category="web">
-          <div class="project-icon">
-            <i class='bx bxs-briefcase'></i>
-          </div>
-          <h3>Portfolio Website</h3>
-          <p>A personal portfolio website showcasing my skills and projects with responsive design.</p>
-        </div>
-        <div class="project-card" data-category="web">
-          <div class="project-icon">
-            <i class='bx bxs-layout'></i>
-          </div>
-          <h3>Responsive Website</h3>
-          <p>A fully responsive website built with modern HTML and CSS techniques.</p>
-          <a href="https://lisakhanya7.github.io/My-Website/" target="_blank" class="project-link">View Project →</a>
-        </div>
-        <div class="project-card" data-category="design">
-          <div class="project-icon">
-            <i class='bx bxs-palette'></i>
-          </div>
-          <h3>VimBa App Prototype</h3>
-          <p>Mobile app UI/UX design with complete interaction design using Figma.</p>
-          <a href="https://www.figma.com/proto/alYJ1phZiYMYwa5zpmM7Rk/Team-7-MUB-work-file?node-id=19241-3433&p=f&t=5BSIt5zJR9zrWhjO-1&scaling=scale-down&content-scaling=fixed&page-id=3140%3A3007&starting-point-node-id=19241%3A3433&show-proto-sidebar=1" target="_blank" class="project-link">View Prototype →</a>
-        </div>
-      </div>
-      
-      <div class="portfolio-certs">
-        <div class="section-header">
-          <h2>Certificate Collection</h2>
-          <p>Verified certificates from my most recent technical courses, including new certificate documents for APIs, Django, and full-stack development. Each document opens in a new browser tab for direct review.</p>
-        </div>
-        <div class="certificates-grid">
-          <a class="certificate-card" href="React Basics Coursera 88Q3EM441K2P.pdf" target="_blank" rel="noopener">
-            <div><i class='bx bxs-award'></i></div>
-            <h3>React Basics</h3>
-            <p>Coursera certificate for React fundamentals and component-based development.</p>
-          </a>
-          <a class="certificate-card" href="Programming in Python Coursera 6WCJA3LMHHIF.pdf" target="_blank" rel="noopener">
-            <div><i class='bx bxs-award'></i></div>
-            <h3>Python Programming</h3>
-            <p>Verified completion of the Coursera Python programming course.</p>
-          </a>
-          <a class="certificate-card" href="Progamming with JavaScript Coursera YAK7EHBZYGJ0.pdf" target="_blank" rel="noopener">
-            <div><i class='bx bxs-award'></i></div>
-            <h3>JavaScript Programming</h3>
-            <p>Certificate for JavaScript programming and modern scripting practices.</p>
-          </a>
-          <a class="certificate-card" href="Introduction to Front-End Development Coursera UKZUP7DQMUOK.pdf" target="_blank" rel="noopener">
-            <div><i class='bx bxs-award'></i></div>
-            <h3>Front-End Development</h3>
-            <p>Course certificate for foundational front-end development skills.</p>
-          </a>
-          <a class="certificate-card" href="Advanced React Coursera YBX3PHVQQOJS.pdf" target="_blank" rel="noopener">
-            <div><i class='bx bxs-award'></i></div>
-            <h3>Advanced React</h3>
-            <p>Certification for deeper React concepts and advanced application patterns.</p>
-          </a>
-          <a class="certificate-card" href="HTML and CSS in depth certificate.pdf" target="_blank" rel="noopener">
-            <div><i class='bx bxs-award'></i></div>
-            <h3>HTML & CSS In Depth</h3>
-            <p>Certificate for advanced markup and styling techniques.</p>
-          </a>
-          <a class="certificate-card" href="html-introduction.pdf" target="_blank" rel="noopener">
-            <div><i class='bx bxs-award'></i></div>
-            <h3>HTML Introduction</h3>
-            <p>Verified completion of introductory HTML coursework.</p>
-          </a>
-          <a class="certificate-card" href="Introduction to Databases for Back-End Development.pdf" target="_blank" rel="noopener">
-            <div><i class='bx bxs-award'></i></div>
-            <h3>Databases for Back-End</h3>
-            <p>Certificate covering database fundamentals and back-end development concepts.</p>
-          </a>
-          <a class="certificate-card" href="Version Control.pdf" target="_blank" rel="noopener">
-            <div><i class='bx bxs-award'></i></div>
-            <h3>Version Control</h3>
-            <p>Certificate covering Git and version control workflow fundamentals.</p>
-          </a>
-          <a class="certificate-card" href="Lisakhaya Gumengi's SQL Intermediate.pdf" target="_blank" rel="noopener">
-            <div><i class='bx bxs-award'></i></div>
-            <h3>SQL Intermediate</h3>
-            <p>Verified intermediate-level certificate in SQL query and database skills.</p>
-          </a>
-          <a class="certificate-card" href="Lisakhanya Gumengi's Web Development certificate (2).pdf" target="_blank" rel="noopener">
-            <div><i class='bx bxs-award'></i></div>
-            <h3>Web Development</h3>
-            <p>Certificate recognizing my web development project experience and learning.</p>
-          </a>
-          <a class="certificate-card" href="css-certificate.pdf" target="_blank" rel="noopener">
-            <div><i class='bx bxs-award'></i></div>
-            <h3>CSS Certificate</h3>
-            <p>Certification for CSS styling and layout capabilities.</p>
-          </a>
-          <a class="certificate-card" href="APIs Certificate.pdf" target="_blank" rel="noopener">
-            <div><i class='bx bxs-award'></i></div>
-            <h3>APIs Certificate</h3>
-            <p>Certificate for API design and integration fundamentals.</p>
-          </a>
-          <a class="certificate-card" href="Django Web Framework Certificate.pdf" target="_blank" rel="noopener">
-            <div><i class='bx bxs-award'></i></div>
-            <h3>Django Web Framework</h3>
-            <p>Certificate for building web applications using Django.</p>
-          </a>
-          <a class="certificate-card" href="Meta Full Stack Developer, Front-End & Back-End from Scratch.pdf" target="_blank" rel="noopener">
-            <div><i class='bx bxs-award'></i></div>
-            <h3>Meta Full Stack</h3>
-            <p>Full-stack development certificate spanning front-end and back-end engineering.</p>
-          </a>
-          <a class="certificate-card" href="Lisakhanya Gumengi's Coding Foundations.pdf" target="_blank" rel="noopener">
-            <div><i class='bx bxs-award'></i></div>
-            <h3>Coding Foundations</h3>
-            <p>Certificate for foundational programming and development skills.</p>
-          </a>
-          <a class="certificate-card" href="Progamming with JavaScript Coursera YAK7EHBZYGJ0.pdf" target="_blank" rel="noopener">
-            <div><i class='bx bxs-award'></i></div>
-            <h3>JavaScript Course</h3>
-            <p>Certificate for JavaScript programming and modern scripting practices.</p>
-          </a>
-          <a class="certificate-card" href="Programming in Python Coursera 6WCJA3LMHHIF.pdf" target="_blank" rel="noopener">
-            <div><i class='bx bxs-award'></i></div>
-            <h3>Python Programming</h3>
-            <p>Verified completion of the Coursera Python programming course.</p>
-          </a>
-          <a class="certificate-card" href="javascript-intermediate.pdf" target="_blank" rel="noopener">
-            <div><i class='bx bxs-award'></i></div>
-            <h3>JavaScript Intermediate</h3>
-            <p>Certificate for intermediate JavaScript skills and application logic.</p>
-          </a>
-          <a class="certificate-card" href="Introduction to Front-End Development Coursera UKZUP7DQMUOK.pdf" target="_blank" rel="noopener">
-            <div><i class='bx bxs-award'></i></div>
-            <h3>Front-End Development</h3>
-            <p>Course certificate for foundational front-end development skills.</p>
-          </a>
-          <a class="certificate-card" href="Advanced React Coursera YBX3PHVQQOJS.pdf" target="_blank" rel="noopener">
-            <div><i class='bx bxs-award'></i></div>
-            <h3>Advanced React</h3>
-            <p>Certification for deeper React concepts and advanced application patterns.</p>
-          </a>
-        </div>
-      </div>
-      <div class="portfolio-bottom">
-        <div class="education">
-          <h3>Education</h3>
-          <ul>
-            <li>Web Development Student, Umuzi</li>
-            <li>High School Diploma, Ikamvalesizwe Combined School</li>
-          </ul>
-          <div class="cta-buttons">
-            <a href="cv.pdf" target="_blank" class="btn btn-primary">SEE MY CV</a>
-            <a href="mailto:lisakhanyaxolisagumenge@gmail.com" class="btn btn-secondary">Hire Me</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="documents" class="documents">
-    <div class="container">
-      <div class="section-header">
-        <h2>Certificate Documents</h2>
-        <p>Click any certificate to open it directly in a new browser tab.</p>
-      </div>
-      <div class="documents-grid">
-        <a class="doc-btn" href="html-introduction.pdf" target="_blank" rel="noopener">
-          <i class='bx bxs-file-pdf'></i>
-          <span>HTML Introduction</span>
-        </a>
-        <a class="doc-btn" href="Lisakhanya's HTML  Introduction.pdf" target="_blank" rel="noopener">
-          <i class='bx bxs-file-pdf'></i>
-          <span>HTML Introduction (Alt)</span>
-        </a>
-        <a class="doc-btn" href="css-certificate.pdf" target="_blank" rel="noopener">
-          <i class='bx bxs-file-pdf'></i>
-          <span>CSS Certificate</span>
-        </a>
-        <a class="doc-btn" href="Lisakhanya's CSS Certificate.pdf" target="_blank" rel="noopener">
-          <i class='bx bxs-file-pdf'></i>
-          <span>CSS Certificate (Alt)</span>
-        </a>
-        <a class="doc-btn" href="HTML and CSS in depth certificate.pdf" target="_blank" rel="noopener">
-          <i class='bx bxs-file-pdf'></i>
-          <span>HTML & CSS Deep Dive</span>
-        </a>
-        <a class="doc-btn" href="javascript-intermediate.pdf" target="_blank" rel="noopener">
-          <i class='bx bxs-file-pdf'></i>
-          <span>JavaScript Intermediate</span>
-        </a>
-        <a class="doc-btn" href="Lisakhanya's JavaScript Imtermediate.pdf" target="_blank" rel="noopener">
-          <i class='bx bxs-file-pdf'></i>
-          <span>JavaScript Intermediate (Alt)</span>
-        </a>
-        <a class="doc-btn" href="Progamming with JavaScript Coursera YAK7EHBZYGJ0.pdf" target="_blank" rel="noopener">
-          <i class='bx bxs-file-pdf'></i>
-          <span>JavaScript Course</span>
-        </a>
-        <a class="doc-btn" href="Introduction to Front-End Development Coursera UKZUP7DQMUOK.pdf" target="_blank" rel="noopener">
-          <i class='bx bxs-file-pdf'></i>
-          <span>Front-End Development</span>
-        </a>
-        <a class="doc-btn" href="React Basics Coursera 88Q3EM441K2P.pdf" target="_blank" rel="noopener">
-          <i class='bx bxs-file-pdf'></i>
-          <span>React Basics</span>
-        </a>
-        <a class="doc-btn" href="Advanced React Coursera YBX3PHVQQOJS.pdf" target="_blank" rel="noopener">
-          <i class='bx bxs-file-pdf'></i>
-          <span>Advanced React</span>
-        </a>
-        <a class="doc-btn" href="Programming in Python Coursera 6WCJA3LMHHIF.pdf" target="_blank" rel="noopener">
-          <i class='bx bxs-file-pdf'></i>
-          <span>Python Programming</span>
-        </a>
-        <a class="doc-btn" href="Python Intermediate of Lisakhanya Gumengi.pdf" target="_blank" rel="noopener">
-          <i class='bx bxs-file-pdf'></i>
-          <span>Python Intermediate</span>
-        </a>
-        <a class="doc-btn" href="Introduction to Databases for Back-End Development.pdf" target="_blank" rel="noopener">
-          <i class='bx bxs-file-pdf'></i>
-          <span>Databases for Back-End</span>
-        </a>
-        <a class="doc-btn" href="Introduction to Databases for Back-End Certificate.pdf" target="_blank" rel="noopener">
-          <i class='bx bxs-file-pdf'></i>
-          <span>Databases for Back-End (Alt)</span>
-        </a>
-        <a class="doc-btn" href="Lisakhanya Gumengi's Coding Foundations.pdf" target="_blank" rel="noopener">
-          <i class='bx bxs-file-pdf'></i>
-          <span>Coding Foundations</span>
-        </a>
-        <a class="doc-btn" href="Lisakhanya Gumengi's JavScript Intermediate.pdf" target="_blank" rel="noopener">
-          <i class='bx bxs-file-pdf'></i>
-          <span>JavaScript Intermediate (Alt 2)</span>
-        </a>
-        <a class="doc-btn" href="Lisakhanya Gumengi's Web Development certificate.pdf" target="_blank" rel="noopener">
-          <i class='bx bxs-file-pdf'></i>
-          <span>Web Development</span>
-        </a>
-        <a class="doc-btn" href="Lisakhanya Gumengi's Web Development certificate (2).pdf" target="_blank" rel="noopener">
-          <i class='bx bxs-file-pdf'></i>
-          <span>Web Development (Alt)</span>
-        </a>
-        <a class="doc-btn" href="APIs Certificate.pdf" target="_blank" rel="noopener">
-          <i class='bx bxs-file-pdf'></i>
-          <span>APIs Certificate</span>
-        </a>
-        <a class="doc-btn" href="Django Web Framework Certificate.pdf" target="_blank" rel="noopener">
-          <i class='bx bxs-file-pdf'></i>
-          <span>Django Web Framework</span>
-        </a>
-        <a class="doc-btn" href="Meta Full Stack Developer, Front-End & Back-End from Scratch.pdf" target="_blank" rel="noopener">
-          <i class='bx bxs-file-pdf'></i>
-          <span>Meta Full Stack Developer</span>
-        </a>
-      </div>
-    </div>
-  </section>
-  <section id="contact" class="contact section">
-    <h2>Get in Touch</h2>
-    <div class="contact-sci">
-      <a href="mailto:lisakhanyaxolisagumenge@gmail.com" target="_blank" title="Email">
-        <i class='bx bxl-gmail'></i>
-      </a>
-      <a href="https://www.facebook.com/xolisa.gumengeii" target="_blank" title="Facebook">
-        <i class='bx bxl-facebook'></i>
-      </a>
-      <a href="https://www.instagram.com/xolisagumengei/" target="_blank" title="Instagram">
-        <i class='bx bxl-instagram'></i>
-      </a>
-      <a href="https://www.linkedin.com/in/lisakhanya-gumengi-b98b6836a" target="_blank" title="LinkedIn">
-        <i class='bx bxl-linkedin'></i>
-      </a>
-      <a href="https://wa.me/27768782426" target="_blank" title="WhatsApp">
-        <i class='bx bxl-whatsapp'></i>
-      </a>
-    </div>
-  </section>
+  <div class="card">
+    <p>
+      I am Lisakhanya Gumengi from Kenton-On-Sea, currently a student at Umuzi.
+      I specialize in building clean, accessible, and scalable web applications.
+    </p>
 
-    <footer class="footer">
-      <hr class="footer-divider">
-      <p>&copy; 2025 Lisakhanya Gumengi. Built with ❤️ and curiosity.</p>
-    </footer>
+    <p>
+      My learning path combines structured coursework and real-world projects across front-end and back-end development.
+      I am currently focusing on advanced full-stack development.
+    </p>
 
-    <script src="./script.js"></script>
+    <ul class="list">
+      <li>Frontend: HTML, CSS, JavaScript, React</li>
+      <li>Backend: Python, Django, SQL, APIs</li>
+      <li>Tools: Git, GitHub, Responsive Design</li>
+    </ul>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <h2>Technical Skills</h2>
+
+  <div class="grid">
+    <div class="card"><i class='bx bxl-html5'></i> HTML5</div>
+    <div class="card"><i class='bx bxl-css3'></i> CSS3</div>
+    <div class="card"><i class='bx bxl-javascript'></i> JavaScript</div>
+    <div class="card"><i class='bx bxl-react'></i> React</div>
+    <div class="card"><i class='bx bxl-python'></i> Python</div>
+    <div class="card"><i class='bx bx-data'></i> SQL</div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <h2>Featured Projects</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>Portfolio Website</h3>
+      <p>Personal portfolio showcasing skills and responsive design systems.</p>
+    </div>
+
+    <div class="card">
+      <h3>Responsive Website</h3>
+      <p>Fully responsive website built with HTML and CSS.</p>
+      <a href="https://lisakhanya7.github.io/My-Website/" target="_blank">Live Project →</a>
+    </div>
+
+    <div class="card">
+      <h3>VimBa App Prototype</h3>
+      <p>Mobile UI/UX design created in Figma with full interaction flow.</p>
+      <a href="https://www.figma.com/proto/alYJ1phZiYMYwa5zpmM7Rk/Team-7-MUB-work-file?node-id=19241-3433" target="_blank">View Prototype →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- CERTIFICATES -->
+<section id="certs" class="section">
+  <h2>Certificates & Achievements</h2>
+
+  <div class="grid small">
+
+    <a class="card" href="React Basics Coursera 88Q3EM441K2P.pdf" target="_blank">React Basics</a>
+    <a class="card" href="Programming in Python Coursera 6WCJA3LMHHIF.pdf" target="_blank">Python Programming</a>
+    <a class="card" href="Progamming with JavaScript Coursera YAK7EHBZYGJ0.pdf" target="_blank">JavaScript Programming</a>
+    <a class="card" href="Advanced React Coursera YBX3PHVQQOJS.pdf" target="_blank">Advanced React</a>
+    <a class="card" href="Introduction to Front-End Development Coursera UKZUP7DQMUOK.pdf" target="_blank">Front-End Development</a>
+    <a class="card" href="HTML and CSS in depth certificate.pdf" target="_blank">HTML & CSS In Depth</a>
+    <a class="card" href="Introduction to Databases for Back-End Development.pdf" target="_blank">Databases</a>
+    <a class="card" href="Version Control.pdf" target="_blank">Git & Version Control</a>
+    <a class="card" href="APIs Certificate.pdf" target="_blank">APIs</a>
+    <a class="card" href="Django Web Framework Certificate.pdf" target="_blank">Django</a>
+    <a class="card" href="Meta Full Stack Developer, Front-End & Back-End from Scratch.pdf" target="_blank">Full Stack Development</a>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <h2>Contact Me</h2>
+
+  <p>Let’s connect and build something impactful.</p>
+
+  <div class="contact-links">
+    <a href="mailto:lisakhanyaxolisagumenge@gmail.com"><i class='bx bx-envelope'></i></a>
+    <a href="https://www.facebook.com/xolisa.gumengeii"><i class='bx bxl-facebook'></i></a>
+    <a href="https://www.instagram.com/xolisagumengei/"><i class='bx bxl-instagram'></i></a>
+    <a href="https://www.linkedin.com/in/lisakhanya-gumengi-b98b6836a"><i class='bx bxl-linkedin'></i></a>
+    <a href="https://wa.me/27768782426"><i class='bx bxl-whatsapp'></i></a>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2026 Lisakhanya Gumengi — Built with dedication & curiosity.</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
-
 </html>
-
-
