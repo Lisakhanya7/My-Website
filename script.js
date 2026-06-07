@@ -86,3 +86,39 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 // PDF links now open in a separate browser tab, so no embedded viewer is required.
+
+// Interactive embedded PDF viewer for Documents section
+const docButtons = document.querySelectorAll('.doc-btn');
+const pdfViewer = document.getElementById('pdfViewer');
+const pdfEmbed = document.getElementById('pdfEmbed');
+const pdfTitle = document.getElementById('pdfTitle');
+const closePdf = document.getElementById('closePdf');
+
+if (docButtons && pdfViewer && pdfEmbed) {
+  docButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const href = btn.getAttribute('href');
+      const title = btn.querySelector('span') ? btn.querySelector('span').innerText : href;
+      if (!href) return;
+      pdfEmbed.setAttribute('src', href);
+      pdfTitle.textContent = title;
+      pdfViewer.classList.add('active');
+      pdfViewer.setAttribute('aria-hidden', 'false');
+      docButtons.forEach(d => d.classList.remove('active'));
+      btn.classList.add('active');
+      // scroll viewer into view
+      pdfViewer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  });
+
+  if (closePdf) {
+    closePdf.addEventListener('click', (e) => {
+      e.preventDefault();
+      pdfEmbed.setAttribute('src', '');
+      pdfViewer.classList.remove('active');
+      pdfViewer.setAttribute('aria-hidden', 'true');
+      docButtons.forEach(d => d.classList.remove('active'));
+    });
+  }
+}
