@@ -1,6 +1,13 @@
+window.addEventListener('error', (event) => {
+  console.error('[App Error]', event.message, 'at', event.filename + ':' + event.lineno);
+});
+
+window.addEventListener('unhandledrejection', (event) => {
+  console.error('[Unhandled Promise]', event.reason);
+});
+
 const navbarLinks = document.querySelectorAll('.navbar a');
 const sections = document.querySelectorAll('section');
-const navbar = document.getElementById('navbar');
 
 document.addEventListener('keydown', (event) => {
   if (event.key.toLowerCase() === 'a') {
@@ -13,7 +20,10 @@ document.addEventListener('keydown', (event) => {
 
 const navigateToSection = (targetId) => {
   const targetSection = document.getElementById(targetId);
-  if (!targetSection) return;
+  if (!targetSection) {
+    console.warn('navigateToSection: section not found for id "' + targetId + '"');
+    return;
+  }
 
   sections.forEach(section => section.style.display = 'none');
   targetSection.style.display = 'block';
@@ -23,13 +33,19 @@ const navigateToSection = (targetId) => {
     link.classList.toggle('active', link.getAttribute('href') === `#${targetId}`);
   });
 
-  history.replaceState(null, '', `#${targetId}`);
+  try {
+    history.replaceState(null, '', `#${targetId}`);
+  } catch (err) {
+    console.warn('history.replaceState failed:', err.message);
+  }
 };
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
-    const targetId = this.getAttribute('href').substring(1);
+    const href = this.getAttribute('href');
+    if (!href) return;
+    const targetId = href.substring(1);
     navigateToSection(targetId);
   });
 });
@@ -37,7 +53,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 navbarLinks.forEach(link => {
   link.addEventListener('click', function (e) {
     e.preventDefault();
-    const targetId = this.getAttribute('href').substring(1);
+    const href = this.getAttribute('href');
+    if (!href) return;
+    const targetId = href.substring(1);
     navigateToSection(targetId);
   });
 });
@@ -60,11 +78,12 @@ const projectCards = document.querySelectorAll('.project-card');
 portfolioFilters.forEach(filter => {
   filter.addEventListener('click', function () {
     const filterValue = this.getAttribute('data-filter');
-    
+    if (!filterValue) return;
+
     // Update active filter button
     portfolioFilters.forEach(f => f.classList.remove('active'));
     this.classList.add('active');
-    
+
     // Filter project cards
     projectCards.forEach(card => {
       if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
@@ -94,13 +113,17 @@ const pdfEmbed = document.getElementById('pdfEmbed');
 const pdfTitle = document.getElementById('pdfTitle');
 const closePdf = document.getElementById('closePdf');
 
-if (docButtons && pdfViewer && pdfEmbed) {
+if (docButtons.length && pdfViewer && pdfEmbed && pdfTitle) {
   docButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       const href = btn.getAttribute('href');
-      const title = btn.querySelector('span') ? btn.querySelector('span').innerText : href;
-      if (!href) return;
+      if (!href) {
+        console.warn('PDF button missing href attribute');
+        return;
+      }
+      const span = btn.querySelector('span');
+      const title = span ? span.innerText : href;
       pdfEmbed.setAttribute('src', href);
       pdfTitle.textContent = title;
       pdfViewer.classList.add('active');
