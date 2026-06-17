@@ -1,31 +1,46 @@
+/* ===== SHARED UTILITIES ===== */
+
+/**
+ * Sets the active class on one element within a group, removing it from all others.
+ * @param {NodeList|Array} elements - Collection of elements to update
+ * @param {Element|null} activeEl - Element to mark as active (null to clear all)
+ */
+function setActiveInGroup(elements, activeEl) {
+  elements.forEach(el => el.classList.remove('active'));
+  if (activeEl) activeEl.classList.add('active');
+}
+
+/**
+ * Smoothly scrolls an element into the viewport.
+ * @param {Element} el - Target element
+ * @param {string} block - Scroll alignment ('start', 'center', 'end')
+ */
+function smoothScrollTo(el, block = 'start') {
+  if (!el) return;
+  el.scrollIntoView({ behavior: 'smooth', block });
+}
+
+/* ===== DOM REFERENCES ===== */
 const navbarLinks = document.querySelectorAll('.navbar a');
 const sections = document.querySelectorAll('section');
-const navbar = document.getElementById('navbar');
 
-document.addEventListener('keydown', (event) => {
-  if (event.key.toLowerCase() === 'a') {
-    const homeSection = document.getElementById('home');
-    if (homeSection) {
-      homeSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
-});
-
+/* ===== NAVIGATION ===== */
 const navigateToSection = (targetId) => {
   const targetSection = document.getElementById(targetId);
   if (!targetSection) return;
 
   sections.forEach(section => section.style.display = 'none');
   targetSection.style.display = 'block';
-  targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  smoothScrollTo(targetSection);
 
-  navbarLinks.forEach(link => {
-    link.classList.toggle('active', link.getAttribute('href') === `#${targetId}`);
-  });
+  setActiveInGroup(navbarLinks,
+    [...navbarLinks].find(link => link.getAttribute('href') === `#${targetId}`)
+  );
 
   history.replaceState(null, '', `#${targetId}`);
 };
 
+// Single delegated handler for all internal anchor links (covers both navbar and in-page links)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -34,48 +49,39 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-navbarLinks.forEach(link => {
-  link.addEventListener('click', function (e) {
-    e.preventDefault();
-    const targetId = this.getAttribute('href').substring(1);
-    navigateToSection(targetId);
-  });
-});
-
-// toggle a class on the header when the page is scrolled, for a stronger background
-window.addEventListener('scroll', () => {
-  const header = document.querySelector('.header');
-  if (!header) return;
-  if (window.scrollY > 50) {
-    header.classList.add('scrolled');
-  } else {
-    header.classList.remove('scrolled');
+// Keyboard shortcut: 'a' scrolls to home
+document.addEventListener('keydown', (event) => {
+  if (event.key.toLowerCase() === 'a') {
+    const homeSection = document.getElementById('home');
+    smoothScrollTo(homeSection);
   }
 });
 
-// Portfolio filter functionality
+// Toggle header background on scroll
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('.header');
+  if (!header) return;
+  header.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+/* ===== PORTFOLIO FILTER ===== */
 const portfolioFilters = document.querySelectorAll('.portfolio-filter');
 const projectCards = document.querySelectorAll('.project-card');
 
 portfolioFilters.forEach(filter => {
   filter.addEventListener('click', function () {
     const filterValue = this.getAttribute('data-filter');
-    
-    // Update active filter button
-    portfolioFilters.forEach(f => f.classList.remove('active'));
-    this.classList.add('active');
-    
-    // Filter project cards
+
+    setActiveInGroup(portfolioFilters, this);
+
     projectCards.forEach(card => {
-      if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-        card.classList.remove('hidden');
-      } else {
-        card.classList.add('hidden');
-      }
+      const matches = filterValue === 'all' || card.getAttribute('data-category') === filterValue;
+      card.classList.toggle('hidden', !matches);
     });
   });
 });
 
+/* ===== INITIALIZATION ===== */
 window.addEventListener('DOMContentLoaded', () => {
   sections.forEach((section, idx) => {
     section.style.display = idx === 0 ? 'block' : 'none';
@@ -85,9 +91,7 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// PDF links now open in a separate browser tab, so no embedded viewer is required.
-
-// Interactive embedded PDF viewer for Documents section
+/* ===== PDF VIEWER ===== */
 const docButtons = document.querySelectorAll('.doc-btn');
 const pdfViewer = document.getElementById('pdfViewer');
 const pdfEmbed = document.getElementById('pdfEmbed');
@@ -101,14 +105,14 @@ if (docButtons && pdfViewer && pdfEmbed) {
       const href = btn.getAttribute('href');
       const title = btn.querySelector('span') ? btn.querySelector('span').innerText : href;
       if (!href) return;
+
       pdfEmbed.setAttribute('src', href);
-      pdfTitle.textContent = title;
+      if (pdfTitle) pdfTitle.textContent = title;
       pdfViewer.classList.add('active');
       pdfViewer.setAttribute('aria-hidden', 'false');
-      docButtons.forEach(d => d.classList.remove('active'));
-      btn.classList.add('active');
-      // scroll viewer into view
-      pdfViewer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+      setActiveInGroup(docButtons, btn);
+      smoothScrollTo(pdfViewer, 'center');
     });
   });
 
@@ -118,7 +122,7 @@ if (docButtons && pdfViewer && pdfEmbed) {
       pdfEmbed.setAttribute('src', '');
       pdfViewer.classList.remove('active');
       pdfViewer.setAttribute('aria-hidden', 'true');
-      docButtons.forEach(d => d.classList.remove('active'));
+      setActiveInGroup(docButtons, null);
     });
   }
 }
