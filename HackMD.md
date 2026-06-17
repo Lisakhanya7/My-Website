@@ -134,7 +134,7 @@ Contact section with social media links
       <a href="https://www.linkedin.com/in/lisakhanya-gumengi-b98b6836a" target="_blank">
         <i class='bx bxl-linkedin'></i>
       </a>
-      <a href="http://wa.me/+27768782426" target="_blank">
+      <a href="https://wa.me/+27768782426" target="_blank">
         <i class='bx bxl-whatsapp'></i>
       </a>
     </div>
